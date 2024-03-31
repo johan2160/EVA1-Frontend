@@ -1,0 +1,412 @@
+/* Neutralizando el CSS  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+/* Estilos del nav */
+
+.navigation {
+  background: #001220;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5% 5%;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navigation__logo-container {
+  display: flex;
+  align-items: center;
+  cursor: default;
+}
+
+.navigation__logo {
+  width: 64px;
+  cursor: pointer;
+}
+
+.navigation__title {
+  display: none;
+  cursor: pointer;
+}
+
+.navigation__title i {
+  text-decoration: underline;
+  color: #c7ccff;
+}
+
+.navigation__links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navigation__links li {
+  font-size: 0.8rem;
+  list-style-type: none;
+}
+
+.navigation__links li a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.25s;
+}
+
+.navigation__links li:hover {
+  text-decoration: underline;
+}
+
+/* Estilos del Header */
+
+header {
+  display: flex;
+}
+
+header img {
+  max-width: 100%;
+}
+
+/* Estilos del main */
+
+main,
+footer {
+  margin-top: 3rem;
+  font-size: 0.8rem;
+}
+
+.empresa {
+  padding: 0rem 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.empresa img {
+  max-width: 300px;
+  border-radius: 4px;
+}
+
+.empresa__info {
+  padding: 1rem;
+}
+
+.empresa__info pre {
+  font-weight: 600;
+  text-wrap: wrap;
+}
+
+.empresa__info pre {
+  line-height: 2rem;
+}
+
+.nosotros {
+  padding: 5rem 1rem;
+  background: #001220;
+  margin-top: 3rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nosotros h3 {
+  color: #c7ccff;
+  padding-bottom: 3rem;
+}
+
+.nosotros img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* Estilos del footer */
+
+footer {
+  padding: 2rem;
+}
+
+footer h4 {
+  padding-bottom: 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Estilos de login.html */
+
+.login-container {
+  padding: 1rem;
+}
+
+form {
+  background: #001220;
+  padding: 3em;
+  max-width: 750px;
+  border: 1px solid #b3b3b3;
+  border-radius: 8px;
+}
+
+form .horizontal {
+  margin-bottom: 2rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.title {
+  font-size: 1.76rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+
+.label-txt {
+  color: #c7ccff;
+  font-size: 0.9rem;
+  margin-bottom: 1.8em;
+}
+
+input {
+  margin-bottom: 1.5em;
+  padding-bottom: 0.8em;
+  font-size: 1rem;
+}
+
+input {
+  padding: 0.5rem;
+  color: #595959;
+}
+
+input::placeholder {
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+}
+
+.border-only-bottom {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 0.05em solid #b3b3b3;
+  outline: none;
+}
+
+.active:focus {
+  border-bottom: 0.05em solid #000000;
+}
+
+button {
+  max-width: 250px;
+  margin-top: 1rem;
+  background-color: #c7ccff;
+  border: none;
+  font-size: 1rem;
+  color: #000;
+  padding: 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(199, 204, 255, 0.9);
+}
+
+button:active {
+  background: #fff;
+  color: #001220;
+}
+
+/* Estilos de la Galeria */
+
+.galeria {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 450px;
+}
+
+.box h3,
+.box p {
+  align-self: flex-start;
+}
+
+.box h3,
+.box p,
+.box img {
+  margin-bottom: 0.5rem;
+}
+
+.box div {
+  align-self: flex-end;
+}
+
+.box div input {
+  max-width: 90px;
+}
+
+.box img {
+  min-width: 250px;
+  max-width: 300px;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 500px) {
+  .navigation__links li {
+    font-size: 1rem;
+  }
+
+  main,
+  footer {
+    font-size: 1rem;
+  }
+
+  .empresa__info pre {
+    line-height: 2rem;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .empresa {
+    flex-direction: row;
+  }
+
+  .empresa__info pre {
+    line-height: 3rem;
+  }
+
+  .nosotros {
+    gap: 2rem;
+  }
+
+  .nosotros img {
+    width: 70%;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .label-txt {
+    font-size: 1rem;
+  }
+
+  input {
+    font-size: 1.2rem;
+  }
+
+  input::placeholder {
+    font-size: 1.1rem;
+  }
+
+  button {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navigation__title {
+    display: block;
+  }
+
+  .navigation__links {
+    gap: 2rem;
+  }
+
+  main {
+    align-items: center;
+  }
+
+  .empresa img {
+    max-width: 450px;
+  }
+
+  .empresa__info pre {
+    line-height: 4rem;
+  }
+
+  .nosotros img {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navigation {
+    padding: 1rem 5rem;
+  }
+
+  .navigation__title {
+    font-size: 1.6rem;
+  }
+
+  .navigation__logo {
+    width: 10%;
+  }
+
+  .navigation__links {
+    gap: 3rem;
+  }
+
+  .navigation__links li a {
+    font-size: 1.15rem;
+  }
+
+  .empresa {
+    justify-content: center;
+  }
+
+  .empresa img {
+    width: 50%;
+    margin-inline: 3rem;
+  }
+
+  .empresa__info {
+    width: 50%;
+  }
+
+  .empresa__info pre {
+    font-size: 1.2rem;
+  }
+
+  .nosotros {
+    gap: 3rem;
+  }
+
+  footer h4 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  .nosotros h3 {
+    font-size: 1.5rem;
+  }
+}
